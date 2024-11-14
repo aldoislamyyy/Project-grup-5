@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FiveStore</title>
+    <link rel="icon" href="./asset/Logo.png" type="image/icon type" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Bagian Header-->
+    <div class="atas">
+      <p class="announcement">Hello Welcome To FiveStore</p>
+
+      <div class="navigation-navbar">
+        <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Cari produk..."
+          onkeyup="searchProducts()"
+        />
+        <ul class="ul-navbar">
+          <li class="li-navbar">
+            <a href="javascript:void(0);" onclick="showCollection()">Katalog</a>
+          </li>
+          <li class="li-navbar"><a href="#">Keranjang</a></li>
+          <div class="right-button">
+            <button class="btn-bar" onclick="openLoginPopup()">Login</button>
+            <button class="btn-bar" onclick="openRegisterPopup()">
+              Register
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Welcome Page -->
+    <section id="welcomePage" class="welcome-page">
+      <button class="btn-lk" onclick="showCollection()">Lihat Katalog</button>
+    </section>
+
+    <!--Bagian Body Collection-->
+    <section id="collection" class="Collection" style="display: none">
+      <div>
+        <header class="coll-text">
+          <h1>Products Collection</h1>
+          <p>Kami memiliki banyak koleksi yang ramah lingkungan</p>
+        </header>
+      </div>
+
+      <!--Sorting Harga-->
+      <select id="sortSelect" onchange="sortProducts()">
+        <option value="default">Urutkan berdasarkan</option>
+        <option value="asc">Harga: Rendah ke Tinggi</option>
+        <option value="desc">Harga: Tinggi ke Rendah</option>
+      </select>
+
+      <!--Produk List-->
+      <section class="produk-list">
+        <div class="produk">
+          <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
+          <h3>PHILIPS Lampu hemat energi</h3>
+          <p>Rp 200.000</p>
+          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
+          <h3>PHILIPS Lampu hemat energi</h3>
+          <p>Rp 200.000</p>
+          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
+          <h3>PHILIPS Lampu hemat energi</h3>
+          <p>Rp 200.000</p>
+          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/jam.png" alt="Jam Dinding" />
+          <h3>Jam Dinding</h3>
+          <p>Rp 100.000</p>
+          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/sendok.png" alt="Sendok Ramah Lingkungan" />
+          <h3>Sendok Ramah Lingkungan</h3>
+          <p>Rp 20.000</p>
+          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+        </div>
+        <!-- Tambahkan produk lain jika perlu -->
+      </section>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2024 Nama Perusahaan. Semua hak dilindungi.</p>
+        <ul class="footer-links">
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="https://wa.me/+6289525440178">Kontak</a></li>
+          <li><a href="#privasi">Kebijakan Privasi</a></li>
+          <li><a href="login.html">Syarat dan Ketentuan</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!--Pop Up Fitur for Login Page-->
+    <div id="loginPopup" class="popup">
+      <div class="popup-content">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button onclick="submitLogin()">Login</button>
+        <button onclick="closePopup('loginPopup')">Tutup</button>
+      </div>
+    </div>
+
+    <!--Popup for Order-->
+    <div id="orderPopup" class="popup">
+      <div class="popup-content">
+        <h2>Pemesanan</h2>
+        <label for="quantity">Kuantitas:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" />
+        <button onclick="submitOrder()">Pesan</button>
+        <button onclick="closePopup('orderPopup')">Tutup</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

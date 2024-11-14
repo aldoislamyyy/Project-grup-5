@@ -1,0 +1,405 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f8f4;
+  color: #333;
+}
+
+/* Announcement Bar */
+.atas {
+  background-color: #87a96b;
+  background-size: cover; /* Mengatur gambar agar menutupi seluruh elemen */
+  background-position: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Navbar */
+.navigation-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.Collection {
+  background-image: url("asset/bg-body.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 40px; /* Menambahkan padding untuk memberikan ruang di dalam elemen */
+  color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+.ul-navbar {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.li-navbar {
+  margin: 0 15px; /* Menambahkan jarak horizontal antar item */
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #95d5b2;
+}
+.li-navbar a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px; /* Padding untuk membuat area klik lebih besar dan simetris */
+  transition: color 0.3s, background-color 0.3s; /* Transisi untuk efek hover */
+  border-radius: 20px;
+}
+.li-navbar a:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 204, 0, 0.2);
+}
+
+.right-button {
+  margin-left: auto;
+  display: flex;
+}
+
+.btn-bar {
+  background-color: #95d5b2;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px; /* Menambahkan jarak antara tombol */
+}
+
+.btn-bar:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 204, 0, 0.2);
+}
+
+/*Search Navbar*/
+.navigation-navbar input[type="text"] {
+  padding: 10px;
+  margin: 0; /* Menambahkan jarak horizontal */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1;
+  max-width: 300px; /* Lebar maksimum untuk input */
+}
+/*responsive*/
+@media (max-width: 768px) {
+  .navigation-navbar {
+    flex-direction: row; /* elemen tetap dalam satu baris */
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    margin-right: 10px;
+  }
+
+  .navigation-navbar input[type="text"] {
+    margin: 0;
+    width: auto;
+    max-width: 150px;
+  }
+
+  .right-button {
+    display: flex; /* Menjaga tombol tetap dalam satu baris */
+    justify-content: flex-start;
+  }
+}
+
+/* Collection Section */
+.Collection {
+  padding: 20px;
+  color: #333;
+}
+.coll-text {
+  font-size: 2rem;
+  color: #2d6a4f;
+  text-align: center;
+}
+
+/*Sort Style*/
+/* Styling untuk dropdown sortSelect */
+#sortSelect {
+  padding: 10px;
+  margin: 10px 0; /* Menambahkan jarak vertikal */
+  border: 1px solid #40916c;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.3s ease; /* Transisi halus untuk border */
+  justify-content: flex-start;
+}
+
+/* Gaya saat dropdown mendapatkan fokus */
+#sortSelect:focus {
+  border-color: #2d6a4f; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+/* Gaya untuk dropdown saat dalam keadaan disabled */
+#sortSelect:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+}
+
+/* Gaya untuk opsi dalam dropdown */
+#sortSelect option {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Gaya untuk opsi saat hover */
+#sortSelect option:hover {
+  background-color: #95d5b2;
+  color: #000;
+}
+
+.produk-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.produk {
+  background-color: #d0f0c0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.btn-order {
+  margin-top: 10px; /* Menambahkan jarak antara deskripsi produk dan tombol */
+  padding: 10px 20px; /* Menambahkan padding untuk tombol */
+  border: none; /* Menghapus border default */
+  border-radius: 5px;
+  cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+.produk:hover {
+  transform: scale(1.05);
+}
+
+.produk img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.produk button {
+  background-color: #40916c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produk button:hover {
+  background-color: #2d6a4f;
+}
+
+/* Footer */
+footer {
+  background-color: #40916c;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+/* Popups */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-btn {
+  background-color: #40916c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-btn:hover {
+  background-color: #2d6a4f;
+}
+
+/*hamburger*/
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .ul-navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #40916c;
+  }
+  .ul-navbar.active {
+    display: flex;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+  .popup-content {
+    width: 90%;
+  }
+}
+
+/* CSS umum untuk pop-up container */
+.popup {
+  display: none; /* Tersembunyi secara default */
+  position: fixed; /* Tetap di layar */
+  z-index: 1000; /* Di atas konten lainnya */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* CSS untuk konten di dalam pop-up */
+.popup-content {
+  position: absolute; /* Posisi absolut dalam pop-up */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk judul pop-up */
+.popup-content h2 {
+  color: #2d6a4f; /* Warna judul sesuai tema */
+}
+
+/* Gaya untuk input dan tombol di dalam pop-up */
+.popup-content input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+}
+
+/* Gaya spesifik untuk tombol di dalam pop-up */
+.popup-content button {
+  background-color: #40916c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup-content button:hover {
+  background-color: #2d6a4f; /* Warna tombol saat hover */
+}
+
+/*welcome Page*/
+.welcome-page {
+  background-image: url("asset/welcome.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Mengatur tinggi section menjadi 100% dari viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btn-lk {
+  color: #fff;
+  background-color: #2d6a4f;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 150px; /* Memberikan jarak atas untuk tombol */
+  margin-left: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animasi transisi */
+}
+.btn-lk:hover {
+  background-color: #95d5b2;
+  transform: scale(1.05);
+}
