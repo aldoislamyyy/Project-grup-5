@@ -21,10 +21,9 @@
           onkeyup="searchProducts()"
         />
         <ul class="ul-navbar">
-          <li class="li-navbar">
-            <a href="javascript:void(0);" onclick="showCollection()">Katalog</a>
+          <li class="li-navbar" id="openCartPopup">
+            <a href="#">Keranjang</a>
           </li>
-          <li class="li-navbar"><a href="#">Keranjang</a></li>
           <div class="right-button">
             <button class="btn-bar" onclick="openLoginPopup()">Login</button>
             <button class="btn-bar" onclick="openRegisterPopup()">
@@ -62,31 +61,97 @@
           <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
           <h3>PHILIPS Lampu hemat energi</h3>
           <p>Rp 200.000</p>
-          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
-        </div>
-        <div class="produk">
-          <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
-          <h3>PHILIPS Lampu hemat energi</h3>
-          <p>Rp 200.000</p>
-          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
-        </div>
-        <div class="produk">
-          <img src="asset/lampu.jpg" alt="PHILIPS Lampu hemat energi" />
-          <h3>PHILIPS Lampu hemat energi</h3>
-          <p>Rp 200.000</p>
-          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
         </div>
         <div class="produk">
           <img src="asset/jam.png" alt="Jam Dinding" />
           <h3>Jam Dinding</h3>
           <p>Rp 100.000</p>
-          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
         </div>
         <div class="produk">
-          <img src="asset/sendok.png" alt="Sendok Ramah Lingkungan" />
+          <img src="asset/sendok ramah lingkungan.png" alt="Sendok Ramah Lingkungan" />
           <h3>Sendok Ramah Lingkungan</h3>
           <p>Rp 20.000</p>
-          <button class="btn-order" onclick="openOrderPopup()">Pesan</button>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/tote_bag-removebg-preview.png" alt="Tote Bag Belanja" />
+            <h3>Tote Bag Belanja</h3>
+            <p>Rp 90.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/tumbler_2-removebg-preview.png" alt="Tumbler Ramah Lingkungan" />
+            <h3>Tumbler Ramah Lingkungan</h3>
+            <p>Rp 35.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/Tempat Bekal.jpeg" alt="Tempat Bekal" />
+            <h3>Tempat Bekal</h3>
+            <p>Rp 50.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/Tempat Sampah.png" alt="Tempat Sampah" />
+            <h3>Tempat Sampah</h3>
+            <p>Rp 400.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/sapu_lidi-removebg-preview.png" alt="Sapu Lidi" />
+            <h3>Sapu Lidi</h3>
+            <p>Rp 33.000</p>    
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/sedotan-removebg-preview.png" alt="Sedotan Ramah Lingkungan" />
+            <h3>Sedotan Ramah Lingkungan</h3>
+            <p>Rp 15.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="asset/Sepeda Listrik.png" alt="Sepeda Listrik" />
+            <h3>Sepeda Listrik</h3>
+            <p>Rp 4.000.000</p>
+            <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/sapu_ijuk-removebg-preview.png" alt="Sapu ijuk" />
+          <h3>Sapu Ijuk</h3>
+          <p>Rp 30.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/kerset-removebg-preview.png" alt="Kerset Lantai" />
+          <h3>Kerset Lantai</h3>
+          <p>Rp 20.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/penyiram_tanaman-removebg-preview.png" alt="Penyiram Tanaman" />
+          <h3>Penyiram Tanaman</h3>
+          <p>Rp 30.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/bunga_hias-removebg-preview.png" alt="Bunga Hias" />
+          <h3>Bunga Hias</h3>
+          <p>Rp 40.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/botol_isi_ulang-removebg-preview.png" alt="Botol Isi Ulang" />
+          <h3>Botol Isi Ulang</h3>
+          <p>Rp 20.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
+        </div>
+        <div class="produk">
+          <img src="asset/tempat_baju_kotor-removebg-preview.png" alt="Tempat baju Kotor" />
+          <h3>Tempat baju Kotor</h3>
+          <p>Rp 52.000</p>
+          <button class="btn-order" onclick="openOrderPopup(event)">Pesan</button>
         </div>
         <!-- Tambahkan produk lain jika perlu -->
       </section>
@@ -122,10 +187,28 @@
     <div id="orderPopup" class="popup">
       <div class="popup-content">
         <h2>Pemesanan</h2>
+        <div class="order-details">
+          <p id="orderProductName"></p>
+          <p id="orderProductPrice"></p>
+        </div>
         <label for="quantity">Kuantitas:</label>
         <input type="number" id="quantity" name="quantity" min="1" value="1" />
-        <button onclick="submitOrder()">Pesan</button>
+        <button onclick="submitOrder()">Tambah ke Keranjang</button>
         <button onclick="closePopup('orderPopup')">Tutup</button>
+      </div>
+    </div>
+
+    <!--Bagian Keranjang-->
+    <div id="cartPopup" class="custom-cart-popup">
+      <div class="custom-popup-content">
+        <span class="custom-close" id="closeCartPopup">&times;</span>
+        <h2>Keranjang Belanja</h2>
+        <div id="cartItems">
+          <!-- Items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+          <button id="checkout">Checkout</button>
+        </div>
       </div>
     </div>
 
