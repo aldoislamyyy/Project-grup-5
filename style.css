@@ -638,3 +638,8 @@ h2 {
   60% { content: '...'; }
   80%, 100% { content: ''; }
 }
+
+.close {
+  float: right;
+  cursor: pointer;
+}

@@ -8,13 +8,25 @@ function toggleNavbar() {
 function openLoginPopup() {
   document.getElementById("loginPopup").style.display = "flex";
 }
+function submitLogin() {
+  alert("Login successful!");
+  closePopup("loginPopup");
+}
 
+function openRegisterModal() {
+  document.getElementById('register').style.display = 'block';
+}
+
+function closeRegisterModal() {
+  document.getElementById('register').style.display = 'none';
+}
+
+// Order Section
 function openOrderPopup(event) {
   const productCard = event.target.closest('.produk');
   const productName = productCard.querySelector('h3').textContent;
   const productPrice = productCard.querySelector('p').textContent;
   
-  // Store the selected product info in the popup
   const orderPopup = document.getElementById("orderPopup");
   orderPopup.dataset.productName = productName;
   orderPopup.dataset.productPrice = productPrice;
@@ -24,11 +36,6 @@ function openOrderPopup(event) {
 
 function closePopup(popupId) {
   document.getElementById(popupId).style.display = "none";
-}
-
-function submitLogin() {
-  alert("Login successful!");
-  closePopup("loginPopup");
 }
 
 // Cart array to store items
