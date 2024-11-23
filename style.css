@@ -31,7 +31,7 @@ body {
 }
 
 .Collection {
-  background-image: url("asset/bg-body.webp");
+  background-color: #fff;
   background-size: cover;
   background-position: center;
   padding: 40px; /* Menambahkan padding untuk memberikan ruang di dalam elemen */
